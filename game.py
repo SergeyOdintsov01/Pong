@@ -51,3 +51,9 @@ while True:
         ball_speed_y = -ball_speed_y
     if ball.colliderect(paddle1) or ball.colliderect(paddle2):
         ball_speed_x = -ball_speed_x
+
+    # Проверка, выходит ли мяч за пределы экрана
+    if ball.left <= 0 or ball.right >= WIDTH:
+        ball.x = WIDTH // 2
+        ball.y = HEIGHT // 2
+        ball_speed_x = BALL_SPEED_X * (-1 if ball.left <= 0 else 1)
