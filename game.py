@@ -57,3 +57,11 @@ while True:
         ball.x = WIDTH // 2
         ball.y = HEIGHT // 2
         ball_speed_x = BALL_SPEED_X * (-1 if ball.left <= 0 else 1)
+
+    screen.fill((0, 0, 0))  # Чёрный фон
+    pygame.draw.ellipse(screen, (255, 255, 255), ball)  # Мяч белого цвета
+    pygame.draw.rect(screen, (255, 255, 255), paddle1)  # Левая ракетка
+    pygame.draw.rect(screen, (255, 255, 255), paddle2)  # Правая ракетка
+    
+    pygame.display.flip()  # Обновление экрана
+    pygame.time.delay(30)  # Задержка для управления частотой кадров
