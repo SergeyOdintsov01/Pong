@@ -41,3 +41,13 @@ while True:
         paddle2.y -= PADDLE_SPEED
     if keys[pygame.K_DOWN] and paddle2.bottom < HEIGHT:
         paddle2.y += PADDLE_SPEED
+
+    # Движение мяча
+    ball.x += ball_speed_x
+    ball.y += ball_speed_y
+
+    # Отскок мяча от стен
+    if ball.top <= 0 or ball.bottom >= HEIGHT:
+        ball_speed_y = -ball_speed_y
+    if ball.colliderect(paddle1) or ball.colliderect(paddle2):
+        ball_speed_x = -ball_speed_x
