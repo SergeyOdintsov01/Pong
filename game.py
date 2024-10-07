@@ -1,7 +1,7 @@
 import pygame 
 import sys 
 
-
+print('test_wsl')
 pygame.init()
 
 
