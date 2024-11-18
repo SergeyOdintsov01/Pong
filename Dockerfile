@@ -2,7 +2,7 @@ FROM python:latest
 
 ADD game.py /Pong
 
-WORKDIR /Pong/
+WORKDIR /Pong
 
 COPY requirements.txt .
 
