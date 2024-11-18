@@ -1,10 +1,10 @@
 FROM python:latest
 
-ADD game.py Pong/
+ADD game.py /Pong
 
-WORKDIR Pong/
+WORKDIR /Pong
 
-COPY requirements.txt
+COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
